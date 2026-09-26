@@ -1,0 +1,11 @@
+{
+  "clangd.arguments": [
+    "--background-index",
+    "--clang-tidy",
+    "--header-insertion=never",
+    "--query-driver=/usr/bin/mpic*,/usr/bin/g++*,/usr/bin/gcc*"
+  ],
+  "diagnostic.errorSign": "✗",
+  "diagnostic.warningSign": "⚠",
+  "suggest.noselect": true
+}
