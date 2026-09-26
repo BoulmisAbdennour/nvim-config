@@ -1,3 +1,6 @@
+**[Français](README.md)** | [العربية](README_AR.md)
+
+
 # nvim-config
 
 Ma configuration Neovim pour le C/C++ (HPC : OpenMP, MPI, CMake) et le Python.
