@@ -274,3 +274,14 @@ augroup nerdtree_refresh
   autocmd!
   autocmd BufEnter NERD_tree_* silent! NERDTreeRefreshRoot
 augroup END
+" NERDTree : gx ouvre le fichier sélectionné avec l'application système (images, PDF…)
+function! s:NERDTreeOpenSystem() abort
+  let l:node = g:NERDTreeFileNode.GetSelected()
+  if !empty(l:node)
+    call jobstart(['xdg-open', l:node.path.str()], {'detach': v:true})
+  endif
+endfunction
+augroup nerdtree_open_system
+  autocmd!
+  autocmd FileType nerdtree nnoremap <buffer><silent> gx :call <SID>NERDTreeOpenSystem()<CR>
+augroup END
