@@ -269,3 +269,8 @@ augroup abdennour
   autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree()
         \ | call feedkeys(":quit\<CR>:\<BS>") | endif
 augroup END
+" NERDTree : rafraîchir l'arbre à chaque fois qu'on y entre
+augroup nerdtree_refresh
+  autocmd!
+  autocmd BufEnter NERD_tree_* silent! NERDTreeRefreshRoot
+augroup END
